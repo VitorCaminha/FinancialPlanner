@@ -1,0 +1,43 @@
+[2023-03-13 00:35:16] [core-api] [service-undefined] error: Maximum call stack size exceeded - (RangeError) [file:  Transaction.get title [as title] (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\entities\transaction.entity.ts:39:17)]
+[2023-03-13 00:45:42] [core-api] [create-transaction-usecase] error: Invalid category id. - (Error) [file:  CreateTransactionUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\transaction\create\create-transaction.usecase.ts:40:9)]
+[2023-03-13 00:46:09] [core-api] [create-transaction-usecase] error: Invalid Transaction Type. Choose between income and outcome. - (Error) [file:  CreateTransactionUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\transaction\create\create-transaction.usecase.ts:24:9)]
+[2023-03-13 01:09:21] [core-api] [service-undefined] error: 
+Invalid `this.prisma.client.transaction.findMany()` invocation in
+C:\Users\valer\Desktop\vitor\FinancialPlanner\src\providers\database\prisma\repositories\prisma-transaction-repository.ts:62:62
+
+  59 }
+  60 
+  61 async findByCategoryId(categoryId: string): Promise<Transaction[]> {
+→ 62   const transaction = await this.prisma.client.transaction.findMany({
+         where: {
+           categoryId: {
+             categoryId: '04365559-1d26-4e0f-858d-a5bfdb3b41ad'
+             ~~~~~~~~~~
+           }
+         },
+         include: {
+           category: true
+         }
+       })
+
+Unknown arg `categoryId` in where.categoryId.categoryId for type StringFilter. Available args:
+
+type StringFilter {
+  equals?: String
+  in?: List<String>
+  notIn?: List<String>
+  lt?: String
+  lte?: String
+  gt?: String
+  gte?: String
+  contains?: String
+  startsWith?: String
+  endsWith?: String
+  not?: String | NestedStringFilter
+}
+
+ - (Error) [file: nvalid `this.prisma.client.transaction.findMany()` invocation in]
+[2023-03-13 01:14:48] [core-api] [find-by-category-transaction-usecase] error: Category with this id not found. - (Error) [file:  FindByCategoryTransactionUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\transaction\findbycategory\findbycategory-transaction.usecase.ts:24:11)]
+[2023-03-13 01:28:23] [core-api] [service-undefined] error: Cannot read properties of undefined (reading 'transaction') - (TypeError) [file:  TransactionRepository.findAll (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\providers\database\prisma\repositories\prisma-transaction-repository.ts:52:51)]
+[2023-03-13 01:28:50] [core-api] [service-undefined] error: Cannot read properties of undefined (reading 'transaction') - (TypeError) [file:  TransactionRepository.findAll (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\providers\database\prisma\repositories\prisma-transaction-repository.ts:52:51)]
+[2023-03-13 04:08:42] [core-api] [create-transaction-usecase] error: Invalid category id. - (Error) [file:  CreateTransactionUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\transaction\create\create-transaction.usecase.ts:44:9)]
