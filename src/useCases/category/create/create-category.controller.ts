@@ -6,7 +6,7 @@ import {
   response,
 } from "inversify-express-utils";
 import {
-  ICreateCategoryDTO,
+  ICreateCategoryRequestDTO,
   ICreateCategoryResponseDTO,
 } from "./create-category.dto";
 import { CreateCategoryUseCase } from "./create-category.usecase";
@@ -19,11 +19,11 @@ class CreateCategoryController extends BaseController {
 
   @httpPost("/")
   async execute(
-    @requestBody() data: ICreateCategoryDTO,
+    @requestBody() data: ICreateCategoryRequestDTO,
     @response() res: any,
   ): Promise<ICreateCategoryResponseDTO> {
-    return this.callUseCase(
-      await this.createCategoryUseCase.execute(data),
+    return this.callUseCaseAsync(
+      this.createCategoryUseCase.execute(data),
       res,
       StatusCode.Created,
     );

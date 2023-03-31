@@ -1,6 +1,0 @@
-[2023-03-10 02:52:36] [core-api] [service-undefined] error: teste - (Error) [file:  PingUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\ping\ping.usecase.ts:23:24)]
-[2023-03-10 02:53:57] [core-api] [pingUseCase] error: teste - (Error) [file:  PingUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\ping\ping.usecase.ts:23:24)]
-[2023-03-10 02:54:58] [core-api] [pingUseCase] error: teste - (Error) [file:  PingController.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\ping\ping.controller.ts:17:24)]
-[2023-03-10 02:55:30] [core-api] [service-undefined] error: teste - (Error) [file:  PingController.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\ping\ping.controller.ts:17:24)]
-[2023-03-10 02:59:08] [core-api] [service-undefined] error: teste - (Error) [file:  PingUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\ping\ping.usecase.ts:15:11)]
-[2023-03-10 03:12:15] [core-api] [service-undefined] error: teste - (Error) [file:  PingUseCase.execute (C:\Users\valer\Desktop\vitor\FinancialPlanner\src\useCases\ping\ping.usecase.ts:15:11)]

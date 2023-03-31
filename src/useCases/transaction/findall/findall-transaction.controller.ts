@@ -12,8 +12,8 @@ class FindAllTransactionController extends BaseController {
 
   @httpGet("/")
   async execute(@response() res: any): Promise<IFindAllTransactionResponseDTO> {
-    return this.callUseCase(
-      await this.findAllTransactionUseCase.execute(),
+    return this.callUseCaseAsync(
+      this.findAllTransactionUseCase.execute(),
       res,
       StatusCode.OK,
     );

@@ -1,6 +1,6 @@
 import { CategoryProps } from "@entities/category.entity";
 
-interface ICreateCategoryDTO {
+interface ICreateCategoryRequestDTO {
   title: string;
 }
 
@@ -8,4 +8,4 @@ interface ICreateCategoryResponseDTO extends CategoryProps {
   id: string;
 }
 
-export { ICreateCategoryDTO, ICreateCategoryResponseDTO };
+export { ICreateCategoryRequestDTO, ICreateCategoryResponseDTO };

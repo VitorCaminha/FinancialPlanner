@@ -3,7 +3,7 @@ import { provide } from "inversify-binding-decorators";
 
 import { Category } from "@entities/category.entity";
 import {
-  ICreateCategoryDTO,
+  ICreateCategoryRequestDTO,
   ICreateCategoryResponseDTO,
 } from "./create-category.dto";
 
@@ -17,8 +17,8 @@ class CreateCategoryUseCase {
   ) {}
 
   async execute(
-    data: ICreateCategoryDTO,
-  ): Promise<ICreateCategoryResponseDTO | null> {
+    data: ICreateCategoryRequestDTO,
+  ): Promise<ICreateCategoryResponseDTO> {
     try {
       const category = new Category(data);
 

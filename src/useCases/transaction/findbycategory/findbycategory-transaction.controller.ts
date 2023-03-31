@@ -22,8 +22,8 @@ class FindByCategoryTransactionController extends BaseController {
     @requestParam("categoryId") categoryId: string,
     @response() res: any,
   ): Promise<IFindByCategoryTransactionResponseDTO> {
-    return this.callUseCase(
-      await this.findByCategoryTransactionUseCase.execute(categoryId),
+    return this.callUseCaseAsync(
+      this.findByCategoryTransactionUseCase.execute(categoryId),
       res,
       StatusCode.OK,
     );

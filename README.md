@@ -55,7 +55,6 @@ Expresso TS [MIT LICENSE](https://github.com/expressots/expressots/blob/main/LIC
 
 ## Suggestions / Changes
 
-- Add port and enviroment from env variables
 - **npm audit report**
 ```
   qs  6.5.0 - 6.5.2
@@ -76,14 +75,10 @@ Expresso TS [MIT LICENSE](https://github.com/expressots/expressots/blob/main/LIC
 
   4 high severity vulnerabilities
 ```
-- Service name not logging if not defined without Report.Error
-- Service name needing to be called in each controller constructor can cause some incorrect information in the log if the user forgets to call it correctly. Perhaps it should be set automatically based on the class name.
-- Default status code in app error?
-- Tirar a lib de uuid e usar a do próprio node:crypto? Se continuar na lib, npm i --save-dev @types/uuid
-- Should use tsx + tsup instead of tsnd and tsc?
-- Fix opinionated template (findall DTO without User in name and other details)
-- callUseCaseAsync not working
-- In memory repository not working out of the box
-- Better way to separate in memory repositories and providers repositories?
+- Service name needing to be called in each controller constructor can cause some incorrect information in the log if the user forgets to call it correctly. Perhaps it should be set automatically based on the class name. (criar issue)
+- Fix opinionated template, change returns to promise and change folder useCases to usecases (findall DTO without User in name and other details) (criar PR)
+  
 - Fix update method in base repository
+- Should use tsx + tsup instead of tsnd and tsc?
+- Better way to separate in memory repositories and providers repositories?
 - Not registering prisma provider as singleton, causing too many instances

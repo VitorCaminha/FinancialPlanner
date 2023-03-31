@@ -22,8 +22,8 @@ class CreateTransactionController extends BaseController {
     @requestBody() data: ICreateTransactionDTO,
     @response() res: any,
   ): Promise<ICreateTransactionResponseDTO> {
-    return this.callUseCase(
-      await this.createTransactionUseCase.execute(data),
+    return this.callUseCaseAsync(
+      this.createTransactionUseCase.execute(data),
       res,
       StatusCode.Created,
     );

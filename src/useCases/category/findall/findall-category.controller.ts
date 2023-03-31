@@ -11,8 +11,8 @@ class FindAllCategoryController extends BaseController {
 
   @httpGet("/")
   async execute(@response() res: any): Promise<IFindAllCategoryResponseDTO> {
-    return this.callUseCase(
-      await this.findAllCategoryUseCase.execute(),
+    return this.callUseCaseAsync(
+      this.findAllCategoryUseCase.execute(),
       res,
       StatusCode.OK,
     );
